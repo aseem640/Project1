@@ -1,0 +1,268 @@
+1. Enter the number of hours it took you to complete the project between
+   the <<< and >>> signs below (eg, <<<10>>>).
+
+   <<< I spent 9 hours to complete this project.>>>
+   
+2. Enter the difficulty level (1: very easy; 5: very difficult) of the project
+   between the <<< and >>> signs below (eg, <<<3>>>).
+
+   <<< 4>>>
+
+3. Provide a short description of how you approached each problem, issues you 
+   encountered, and how you resolved those issues.
+
+   Problem 1 (Brute-force Implementation)
+      Approach:
+      I created the instance variable RedBlackBinarySearchTreeST<Point2D,value>bst.
+
+      I constructed the empty symbol table.
+
+      I created the isEmpty method which returns whether its empty or not.
+
+      I created the size method which returns the size of symbol table.
+
+
+
+      I created the public void put method to insert the given point into the symbol table.
+
+      If value is null it throw the NullPointerException.
+
+      If p is null it throw the NullPointer exception.
+
+      It insert the value with the help of private put method , passing the argument as point and
+      value.
+
+
+
+      I created the public method get.
+
+      I checked the corner case, if p is null, it throw NullPointException.
+
+      It returns the point p with the help of private get method.
+
+
+
+      I created the Boolean method contains.
+
+      It throws NullPointerException if p is null.
+
+      It returns the Boolean value whether it given point is contains or not.
+
+
+
+      I created the public method iterable which returns all the points of the symbol table.
+
+      I created the Iterable range which has argument as RectHV rect.
+
+      I created the linkedQueue of type Point2d.
+
+      I enque all the points in LinkedQueue it it is contains in the rect.
+
+      I returned the LinkedQueue.
+
+
+
+      I created the public Point2D nearest
+
+      I checked the corner case, if p is null, thro exception.
+
+      I initialize the minimum distance to positive infinity.
+
+      I initialize the nearPoint to the null.
+
+      Declare the variable double distance.
+
+      I read all the points and find the distance from p to current point.
+
+      If distance is lower than previous distance, I update the min distance and corresponding
+
+      Point as the near point.
+
+
+
+      I created the public Iterable Point2D nearest.
+
+      I created the MaxPq p.distanceToOrder type.
+
+      I inserted the point in pq.
+
+      If points in pq is more than k, I deleted the max and insert the new point.
+
+      Returned the k near point from the MaxPQ.
+
+
+
+      Issues and resolution:
+      I did not get any particular issues in this project. The excercise and lectures example
+      is really helpful for this project.
+
+   Problem 2 (2dTree Implementation)
+      Approach:
+      In this project I created the private instance variable root ,type Node and int n.
+
+      I constructs an empty symbol table by initializing root as null, and n as 0.
+
+      I created the Boolean IsEmpty method and returned whether symbol table is empty or not.
+
+      I created the size method and returned the n.
+
+
+
+      I created the public void put method which have Point2d p, Value value as argument.
+
+      I checked the corner case for p and throw the null pointer exception if p is null.
+
+      I created the RectHV rect object by initializing the [infinity,Infinity]*[infinity, infinity].
+
+      I updated the root, with root, point p, value v, rect and lr. In which lr is the verticle
+      aligned.
+
+
+
+      I created the public get method with Point2d as argument.
+
+      I checked the corner case for p,and throw the null pointer exception if p is null.
+
+      I returned the get method with the help of private get by passing the argument as
+
+      Root, p and lr as true at beginning.Lr will be updated in each call with the help of private
+
+      Method.
+
+
+
+      I created the contains method by passing the Point2D as the argument.
+
+      I checked the corner case, if p is null I threw null pointer exception.
+
+      If root is null I returned false,
+
+      And with the help of get method I returned the Boolean value. If get method do not have
+
+      Given points, it returned false otherwise true.
+
+
+
+      I created the Iterable<Point2D> points().
+
+      I created the LinkedQueue<Node> s object and p object of Point2d type .
+
+      Until the s wont be empty. I deque the x from s and enque the x.p in p, s.enque(x.lb),
+      s.enque(s.rt).
+
+      I returned the p.
+
+
+
+      I created the Public Iterable<Point2D> range (RectHV rect).
+
+      I created the linkedQueue object. I called the range method and passed the argument as root,
+      rect and newly created q.
+
+      I returned the p.
+
+
+
+      I created the public Point2D nearest(point2D p) method.
+
+      I returned nearest method by passing root, p ,root.p and true as argument.
+
+
+
+      I created Iterable<Point2D>nearest(Point2D p, int k) as argument.
+
+      I created the MaxPQ object pq and returned the nearest method by passing the argument as root,
+      p,k,PQ, and lr as true.
+
+
+
+      I created the private Node put9Node x, Point2D p, Value value, RectHV rect, Boolean lr).
+
+      I checked the corner case for value and root x.
+
+      If the point in x is the same as given point, I updated the value in given point.
+
+      Otherwise I made a recursive call to put by passing the appropritate argument to insert the
+       given point.
+
+      If lr is true and p.x is smaller than x.p.x(), I insert in the x.lb by creating new RectHV
+       object.
+
+      If p.x() is higher I inserted in right by passing the appropriate argument.
+
+      If lr is false and if p.y() is smaller than x.p.y(),I inserted to the left,Otherwise in right.
+
+      I simply returned the x.
+      I created the private method get with argument as Node x , Point2D p, boolean lr.
+
+      If x is null I returned null.
+
+      If the point in x is same as the given point, I returned the value in x.
+
+      I  made the recursive call to get() with appropriate arguments to find the value
+
+      Corresponding to the given point in the left subtree x.lb or right subtree x.rt depending
+
+      On how x.p and p compare.
+
+      If p is lower than x.p, I looked in left otherwise in right.
+
+
+
+      I created the private method void range.
+
+      I collected in the given queue all points in the KdTree that are inside rect.
+
+      If rect contained the point x, I enque the point into q.
+
+      I made the recursive call to range() on the left subtree x.lb, and right of subtree s.rt.
+
+
+
+      I created the Point2d nearest method.
+
+      I returned the point in the KdTree x that is closest to p, or null. Nearest is the closest point.
+
+      If the point x.p is different from the given point p, the squared distance between two is smaller than the squared distance between nearest and p,I updated the nearest to x.p.
+
+      I made the recursive call to the nearest() on left subtree x.lb if px.()<x.p.x or lr false and p.y()<x.p.y(), otherwise recursively call right subtree x.rt.
+
+
+
+      I created the private method nearest by passing Node x, Point2D p, ink k , MaxPQ<POINT2d>
+
+      And Boolean lr.
+
+      I checked the corner case, If p is nulle I threw the null pointer exception.
+
+      I called the private nearest() method passing it an empty MaxPQ of point2D object, and returned the pq.
+
+      If x is null or if the size of pq is greater than k, I simply returned .
+
+      I made the recursive call to the nearest by checking whether it is vertical aligned or horizontal.
+
+      If p.x()<x.p.x() , I called x.lb and x.rt. otherwise I called x.rt and x.lb.
+
+      For the else par(horizontal aligned) I followed the same concept.
+
+
+
+
+      Issues and resolution: I got issues in private put method.while calling the private get method
+       recursively,i returned x.lb and x.rt value instead of calling hte private get method with
+       right argument.
+       I fixed this issues by passing the right argument.
+
+4. Did you receive help from anyone? List their names, status (classmate, 
+   CS210 grad, TA, other), and the nature of help received.
+
+   Name               Status       Help Received
+   Bang Q Tran              TA        project concept
+
+   Osha               SI           concept.
+
+5. List any other comments here. Feel free to provide any feedback on how
+   much you learned from doing the assignment, and whether you enjoyed
+   doing it.
+
+   ...
